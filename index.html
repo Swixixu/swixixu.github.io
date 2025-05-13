@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source - Swixixu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://swixixu.fr/favicon.ico" type="image/x-icon">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Open Source - Swixixu">
+    <meta property="og:url" content="https://swixixu.github.io">
+    <meta property="og:description" content="Tout l'open source que j'utilise 😀">
+</head>
+<body>
+    <header>
+        <h1>Hey 👋, Moi c'est Swixixu</h1>
+        <p>Et voici les principaux projets / packages <mark>Open Source</mark> que j'utilise</p>
+        
+        <button id="scrollBtn"><img src="https://swixixu.fr/scroll.png" alt="Scroll"></button>
+    </header>
+    
+    <main class="content">
+        <div class="card">
+            <div>
+                <h3>Ubuntu</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Linux">
+            </div>
+            <p>Ubuntu est un système d'exploitation basé sur le noyau Linux. Je l'utilise pour mon VPS.</p>
+            <a href="https://Ubuntu.com"><button>En savoir plus</button></a>
+        </div>
+        
+        <div class="card">
+            <div>
+                <h3>Express.js</h3>
+                <img src="assets/express.js.png" alt="Express.js">
+            </div>
+            <p>Express est un framework web pour Node.js. Je l'utilise dans la majorité de mes projets web (Swixixu.fr par exemple).</p>
+            <a href="https://expressjs.com"><button>En savoir plus</button></a>
+        </div>
+        
+        <div class="card">
+            <div>
+                <h3>Node.js</h3>
+                <img src="assets/node.js.png" alt="Node.js">
+            </div>
+            <p>Node.js® est un environnement d'exécution JavaScript gratuit, open-source et multiplateforme qui permet aux développeurs de créer des serveurs, des applications web, des outils en ligne de commande et des scripts. (Source nodejs.org). J'utilise aussi npm pour les packages Node.</p>
+            <a href="https://nodejs.org"><button>En savoir plus</button></a>
+        </div>
+        
+        <div class="card">
+            <div>
+                <h3>Dotenv</h3>
+                <img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg" alt="Dotenv">
+            </div>
+            <p>Dotenv est un module qui sert à lire les variables d'environnement.</p>
+            <a href="https://www.npmjs.com/package/dotenv"><button>En savoir plus</button></a>
+        </div>
+        
+        <div class="card">
+            <div>
+                <h3>Uptime Kuma</h3>
+                <img src="https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg" alt="Uptime Kuma">
+            </div>
+            <p>Uptime Kuma est un outil de monitoring self-hosted.</p>
+            <a href="https://github.com/louislam/uptime-kuma"><button>En savoir plus</button></a>
+        </div>
+        
+        <div class="card">
+            <div>
+                <h3>VS Code</h3>
+                <img src="assets/vscode.png" alt="VS Code">
+            </div>
+            <p>VS Code est mon éditeur de code. Il est vraiment complet, gratuit, je recommande.</p>
+            <a href="https://code.visualstudio.com"><button>En savoir plus</button></a>
+        </div>
+        
+        <div class="card">
+            <div>
+                <h3>MySQL</h3>
+                <img src="assets/mysql.png" alt="MySQL">
+            </div>
+            <p>MySQL est le moteur de base de données que j'utilise. MySQL est open source mais appartient à Oracle.</p>
+            <a href="https://mysql.com"><button>En savoir plus</button></a>
+        </div>
+        
+        <div class="card">
+            <div>
+                <h3>Pterodactyl</h3>
+                <img src="https://pterodactyl.io/logos/pterry.svg" alt="Pterodactyl">
+            </div>
+            <p>Pterodactyl est une plateforme d'hébergement de serveur. Idéal pour serveur Minecraft, ou tout autre type de serveur.</p>
+            <a href="https://pterodactyl.io"><button>En savoir plus</button></a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>J'ai mis l'essentiel des projets Open Source que j'utilise, impossible de tous les lister.</p>
+    </footer>
+    
+    <script>document.addEventListener('DOMContentLoaded', () => {
+        const button = document.getElementById('scrollBtn');
+        const target = document.querySelector('.content');
+        
+        setTimeout(() => {
+            button.classList.add('show');
+        }, 3000);
+        
+        function hideButton() {
+            button.classList.remove('show');
+        }
+        
+        button.addEventListener('click', () => {
+            target.scrollIntoView({ behavior: 'smooth' });
+            hideButton();
+        });
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                hideButton();
+            }
+        });
+    });
+</script>
+</body>
+</html>
